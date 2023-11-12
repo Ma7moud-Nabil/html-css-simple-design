@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#111, #222);
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+body:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+    z-index: -1;
+}
+
+.container {
+    width: 70%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.container nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    padding: 20px 0;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+
+.container nav .logo {
+    text-decoration: none;
+    color: white;
+    font-size: 32px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+}
+
+.container nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    letter-spacing: 1.4px;
+}
+
+.container nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+    padding: 5px;
+}
+
+.container nav ul li a:hover,
+.container nav ul li a.active {
+    color: #111;
+    background-color: rgba(255, 255, 255, 0.577);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 95%;
+        height: 95%;
+    }
+
+    .container nav .logo {
+        font-size: 20px;
+        letter-spacing: 1.5px;
+    }
+
+    .container nav ul li {
+        margin: 0 2px;
+        letter-spacing: normal;
+    }
+
+    .container nav ul li a {
+        font-size: 12px;
+    }
+}
+
+.container .content {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+
+.container .content .text {
+    color: white;
+    width: 80%;
+    position: absolute;
+    top: 130px;
+}
+
+.container .content .text h2 {
+    font-size: 50px;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.container .content .text p {
+    font-size: 20px;
+    line-height: 1.8;
+    width: 50%;
+}
+
+@media (max-width: 767px) {
+    .container .content .text {
+        text-align: center;
+        left: 50%;
+        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+    }
+
+    .container .content .text h2 {
+        font-size: 35px;
+        line-height: 1.6;
+    }
+
+    .container .content .text p {
+        width: 100%;
+    }
+}
+
+
+.container .content img {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+@media (max-width: 992px) {
+    .container nav ul li a {
+        font-size: 16px;
+    }
+
+    .container .content .text {
+        top: 20px;
+    }
+
+    .container .content .text h2 {
+        font-size: 40px;
+    }
+
+    .container .content img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container .content img {
+        top: 95%;
+        right: 50%;
+        transform: translate(50%, -120%);
+        -webkit-transform: translate(50%, -120%);
+        -moz-transform: translate(50%, -120%);
+        -ms-transform: translate(50%, -120%);
+        -o-transform: translate(50%, -120%);
+    }
+
+    body:after {
+        clip-path: circle(45% at 50% 100%);
+    }
+}
+
+@media (max-width: 575px) {
+    .container .content .text {
+        width: 100%;
+        top: 30px;
+    }
+
+    .container .content .text h2 {
+        font-size: 30px;
+    }
+
+    .container .content .text p {
+        font-size: 18px;
+    }
+
+    .container .content img {
+        width: 300px;
+    }
+
+    body:after {
+        clip-path: circle(40% at 50% 100%);
+    }
+}
