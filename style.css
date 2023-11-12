@@ -211,6 +211,10 @@ body:after {
 }
 
 @media (max-width: 575px) {
+    .container nav ul li a {
+        font-size: 13px;
+    }
+
     .container .content .text {
         width: 100%;
         top: 30px;
